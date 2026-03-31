@@ -1,7 +1,32 @@
+"use client";
+
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Intro from "@/components/Intro";
+import { useState, useEffect } from "react";
+import { AnimatePresence} from "framer-motion";
+
 export default function Home() {
+  const [showIntro, SetShowIntro] = useState(true);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      SetShowIntro(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <main className="h-screen flex items-center justify-center bg-white text-black">
-      <h1 className="text-3xl font-semibold">Setup Ready 🚀</h1>
+    <main className="relative">
+      <AnimatePresence mode="wait">
+        {showIntro && <Intro key="intro" />} 
+      </AnimatePresence>
+      {!showIntro && (
+          <>
+            <Navbar />
+            <Hero />
+          </>
+      )}
     </main>
   );
 }
