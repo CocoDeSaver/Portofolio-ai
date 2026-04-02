@@ -24,7 +24,7 @@ export default function Hero() {
       </div>
 
       <div className="absolute inset-0 flex items-center justify-center z-0 opacity-50">
-        <div className="w-[1200px] md:w-[1700px]">
+        <div className="w-300 md:w-425">
           <Lottie animationData={heroAnimation} loop/>
         </div>
       </div>
@@ -34,7 +34,7 @@ export default function Hero() {
         <p className="text-xl md:text-2xl font-extralight">
           Hi! I'm Nico
         </p>
-        <h1 className="text-5xl md:text-8xl md:text-7xl font-light">
+        <h1 className="text-5xl md:text-8xl font-light">
           AI Engineer 
         </h1>
         <h1 className="text-5xl md:text-8xl font-light">

@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
+import ChatButton from "@/components/chatButton";
 import { useState, useEffect } from "react";
 import { AnimatePresence} from "framer-motion";
 
@@ -23,6 +24,7 @@ export default function Home() {
       </AnimatePresence>
       {!showIntro && (
           <>
+            <ChatButton />
             <Navbar />
             <Hero />
           </>
